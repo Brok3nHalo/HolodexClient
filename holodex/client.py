@@ -87,6 +87,7 @@ class HolodexClient(HolodexHttpClient):
         limit: Optional[int] = None,
         offset: Optional[int] = None,
         paginated: Optional[str] = None,
+        topic: Optional[list[str]] = None,
     ) -> ChannelVideo:
         params = self.__get_params(locals(), ["channel_id", "type"])
         return ChannelVideo(
